@@ -1,0 +1,44 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border: solid;
+    /* * will come back to this at a later time */
+    display: none;
+}
+.stq, .tb {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.stq input, .stq select, .tb button, .tb textarea {
+      height: 3rem;
+}
+
+
+.stq input, .stq select  {
+    width: 33%;
+  
+    margin: 0 1rem;
+  
+    padding: 1rem;
+}
+
+
+.tb button, .tb textarea {
+   
+    margin-top: 3rem;
+    width: 40%;
+}
+
+.tb textarea {
+    height: 8rem;
+}
+
+.tb button {
+    max-width: 8rem;
+}
