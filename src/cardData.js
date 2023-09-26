@@ -68,6 +68,20 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         answer: ["Controlled element"],
       },
       {
+        id: 20362,
+        question: "What is deriving state?",
+        answer: [
+          "Deriving state is accessing a peice of state from already existing state. For example, using one large object for user info vs a peice of state for each peivce of info. First name, last name together in one state object vs firstname state and last name state. Derive it from the large object.",
+        ],
+      },
+      {
+        id: 20332,
+        question: "What is an issue that comes from NOT deriving state?",
+        answer: [
+          "Unnecessary re-renders will occur. Also you will not have a single source of truth for related data.",
+        ],
+      },
+      {
         id: 2021,
         question: "What is the proper way to update a counter by 1 with state?",
         answer: ["setCount(prev => prev + 1)"],
@@ -129,10 +143,30 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         ],
       },
       {
+        id: 44922,
+        question:
+          "How do you change state in one sibling to reflect in another sibling AFTER lifting state?",
+        answer: [
+          "You pass the setter function as a prop from the parent to the child that needs to make the change to state",
+        ],
+      },
+      {
+        id: 40022,
+        question:
+          "What is a name for changing the state of a parent from a child via setter function prop? ",
+        answer: ["Inverse Data Flow"],
+      },
+      {
+        id: 45322,
+        question: "More Lifting State Examples",
+        answer: ["Look at the travel-list from the URC."],
+      },
+      {
         id: 11873,
         question: "How do I conditionally set inline styles ?",
         answer: [
-          "Set the conditional statement directly after the desired style attribute","<h1 style{{color: checked ? 'green' : 'red'}}></h1>",
+          "Set the conditional statement directly after the desired style attribute",
+          "<h1 style{{color: checked ? 'green' : 'red'}}></h1>",
         ],
       },
     ],
@@ -329,7 +363,7 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         answer: ["How to write and understand the implementation of the API"],
       },
       {
-        id: 4352,
+        id: 43852,
         question: "What is a remote API?",
         answer: [
           `Being able to control the UI from any distance (potentially) `,
@@ -337,7 +371,7 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         ],
       },
       {
-        id: 4352,
+        id: 43152,
         question: "Remote API Example?",
         answer: ["Shazam"],
       },
@@ -596,7 +630,7 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         ],
       },
       {
-        id: 1784,
+        id: 17484,
         question: "Environment Example Use-case",
         answer: [
           `username | {{TWILIO_ACCOUNT_SID}},  password | {{TWILIO_AUTH_TOKEN}}`,
@@ -618,8 +652,10 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
     details: [
       {
         id: 1875,
-        question: "state",
-        answer: ["local"],
+        question: "reduce method",
+        answer: [
+          "Allows you to accumulate the sum of a data set. It takes 2 arguments, acc, cur. Acc typically starts at 0, cur is the current number to be added to the accumulator. EX: cart.reduce((acc, cur) => acc + cur.price, 0)",
+        ],
       },
       {
         id: 5682,
@@ -819,7 +855,7 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         ],
       },
       {
-        id: 41178,
+        id: 412178,
         question: "Development #1B",
         answer: [
           `Using a polyfill to mimic any missing support using JS or other technologies`,
@@ -847,7 +883,7 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         ],
       },
       {
-        id: 41178,
+        id: 411678,
         question: "Development #4",
         answer: [`Do NOT leave testing until the end!!`],
       },
@@ -878,7 +914,7 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         answer: [`Emulate device using software on your desktop computer`],
       },
       {
-        id: 93485,
+        id: 935485,
         question: "Emulators B)",
         answer: [
           `Software that allows you to emulate multiple operating system/software combinations on your desktop computer`,
@@ -892,7 +928,7 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         ],
       },
       {
-        id: 93485,
+        id: 934875,
         question: "Most Efficient Way to Emulate",
         answer: [
           `Automation tools `,
@@ -960,7 +996,7 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         ],
       },
       {
-        id: 43522,
+        id: 411122,
         question: "Selenium's Mission Statement",
         answer: [`Selenium automates browsers. That's it! `],
       },
@@ -973,6 +1009,32 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         ],
       },
       // left off on fixing/iterations
+    ],
+  },
+  {
+    topic: "package.json",
+    details: [
+      {
+        id: 182275,
+        question: "License",
+        answer: [
+          "Field where you inform users of what they are allowed to do with your project. Examples are MIT and BSD",
+        ],
+      },
+      {
+        id: 568122,
+        question: "MIT",
+        answer: [
+          "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code",
+        ],
+      },
+      {
+        id: 873453,
+        question: "BSD",
+        answer: [
+          "a family of permissive free software licenses, imposing minimal restrictions on the use and distribution of covered software.",
+        ],
+      },
     ],
   },
 ];

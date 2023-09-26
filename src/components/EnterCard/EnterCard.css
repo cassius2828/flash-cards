@@ -1,0 +1,47 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 70%; */
+  border: solid;
+  /* * will come back to this at a later time, i need to build a server to rememeber the changes I make and pull 
+ * the data from the server to use  */
+  display: none;
+}
+
+.QA-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border: solid;
+}
+
+.question,
+.answer {
+  min-width: 100px;
+  width: 50%;
+}
+
+.answer {
+  height: 5rem;
+}
+
+.question {
+  height: 2.5rem;
+}
+/* //////////////////// */
+/* BTN AND BTN CONTAINER */
+/* //////////////////// */
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.submit-container button {
+  width: 10rem;
+  height: 2.5rem;
+}
