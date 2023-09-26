@@ -536,6 +536,28 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
         question: "JQ and Pipe Example",
         answer: ["curl -X'GET'... | jq"],
       },
+      {
+        id: 90375,
+        question: "CLI",
+        answer: ["Command Line Interface"],
+      },
+      {
+        id: 99075,
+        question: "Uniform Design",
+        answer: [
+          `Resource indentification in requests`,
+          `Resource manipulation through representations`,
+          `Self-descriptive messages`,
+          `Hypermedia as the engine of application state helper libraries`,
+        ],
+      },
+      {
+        id: 92875,
+        question: "Web-hooks",
+        answer: [
+          "Webhooks are automated messages sent from apps when something happens. They have a message—or payload—and are sent to a unique URL—essentially the app's phone number or address. Webhooks are almost always faster than polling, and require less work on your end.",
+        ],
+      },
     ],
   },
   {
@@ -644,6 +666,33 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
           `You can import and export this info `,
           `Typically written in JSON`,
         ],
+      },
+      {
+        id: 10404,
+        question: "Twilio Functions: Handler Functions",
+        answer: [`Context`, `Event`, `callback`],
+      },
+      {
+        id: 154064,
+        question: "Context",
+        answer: [
+          `Obj that holds info about the function that's running`,
+          "It knows the domain name of the function",
+        ],
+      },
+      {
+        id: 15404,
+        question: "Event",
+        answer: [
+          `Web request, way info is passed into the web app`,
+          "Will hold everything about the text message that was incoming",
+          `Message will have "To", "From", "Body", etc`,
+        ],
+      },
+      {
+        id: 15994,
+        question: "callback",
+        answer: [`How we send info out the function`],
       },
     ],
   },
@@ -1031,6 +1080,32 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
       {
         id: 873453,
         question: "BSD",
+        answer: [
+          "a family of permissive free software licenses, imposing minimal restrictions on the use and distribution of covered software.",
+        ],
+      },
+    ],
+  },
+  {
+    topic: "Python",
+    details: [
+      {
+        id: 1823275,
+        question: "sample",
+        answer: [
+          "Field where you inform users of what they are allowed to do with your project. Examples are MIT and BSD",
+        ],
+      },
+      {
+        id: 5683122,
+        question: "sample",
+        answer: [
+          "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code",
+        ],
+      },
+      {
+        id: 8733453,
+        question: "sample",
         answer: [
           "a family of permissive free software licenses, imposing minimal restrictions on the use and distribution of covered software.",
         ],

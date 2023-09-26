@@ -20,8 +20,17 @@ function App() {
   const handleCollapse = (sectionIndex) => {
     setAccordian(sectionIndex);
     if (sectionIndex === accordian) setAccordian(null);
-    console.log("test");
   };
+
+const sortedData = data.sort((a,b) => {
+  const A_topic = a.topic.toLocaleUpperCase();
+  const B_topic = b.topic.toLocaleUpperCase();
+
+  if(A_topic < B_topic) return -1
+  if (A_topic > B_topic) return 1;
+  return 0
+})
+console.log(sortedData);
   return (
     <div className="App">
       <div id="nav">
