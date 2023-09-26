@@ -4,21 +4,24 @@ import data from "./cardData.js";
 import { Card } from "./components/Card/Card";
 import { EnterCard } from "./components/EnterCard.js/EnterCard";
 import { useState } from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./components/Footer/Footer";
 // import { Test } from "./test";
 function App() {
   const [selectedId, setSelectedId] = useState(null);
+  const [accordian, setAccordian] = useState(null);
   const handleFlip = (id) => {
     setSelectedId(id !== selectedId ? id : null);
   };
-  const handleCollapse = (id1, id2) => {
-const scroll = document.getElementById(id1);
-const arrow = document.getElementById(id2);
-scroll.classList.toggle('ghost');
-arrow.classList.toggle('rotate');
-  }
+
+  // this change allowed me to allow only 1 accordian to be open at a time AND I can toggle 
+  // the current accordian as well
+  const handleCollapse = (sectionIndex) => {
+    setAccordian(sectionIndex);
+    if (sectionIndex === accordian) setAccordian(null);
+    console.log("test");
+  };
   return (
     <div className="App">
       <div id="nav">
@@ -27,19 +30,25 @@ arrow.classList.toggle('rotate');
         <span>Sign Up</span>
       </div>
       <h1>Flash Cards</h1>
-      <EnterCard />
-      {data.map((i) => {
+
+      {data.map((i, index) => {
         return (
           <div key={i.topic} className="sections">
-            <hr style={{width: '80vw'}}></hr>
+            <hr style={{ width: "80vw" }}></hr>
             <div className="toggle-container">
               <h2 className="mb4 mt4">{i.topic}</h2>
-              <FontAwesomeIcon id={i.topic + 'icon'} onClick={() => handleCollapse(i.topic, i.topic + 'icon')} style={{cursor: 'pointer'}} className="ml3 mt3" size="3x" icon={faAngleDown}/>
+              <FontAwesomeIcon
+                id={i.topic + "icon"}
+                onClick={() => handleCollapse(index)}
+                style={{ cursor: "pointer" }}
+                className={accordian === index ? "rotate ml3 mt3" : "ml3 mt3"}
+                size="3x"
+                icon={faAngleDown}
+              />
             </div>
             {}
-            <div id={i.topic} className="ghost">
+            <div id={i.topic} className={accordian !== index ? "ghost" : null}>
               <InfiniteScroll
-            
                 style={{
                   // border: "solid",
                   width: "80vw",
@@ -79,7 +88,7 @@ arrow.classList.toggle('rotate');
       })}
 
       {/* <Test/> */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
