@@ -169,6 +169,95 @@ It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are ex
           "<h1 style{{color: checked ? 'green' : 'red'}}></h1>",
         ],
       },
+      {
+        id: 99873,
+        question: "What is useMemo() and what is it used for?",
+        answer: [
+          `You put a function inside of it that you only want to re-render if specific values change. These values are entered in a dependency array as the 2nd argument`,
+          `Should only be used for pure functions`,
+          `Useful for expensive calculations`,
+        ],
+      },
+      {
+        id: 922873,
+        question: "How can I tell if a calculation is expensive?",
+        answer: [
+          `Typically only expensive if you are iterating over thousands of objects`,
+          `You can tell if a calculation is expensive by logging the time it takes to complete(console.time(filterArray), console.timeEnd(filterArray)). If it is more than 1s then you may want to memoize it`,
+        ],
+      },
+      {
+        id: 911113,
+        question:
+          "When does react say a useEffect should be used concerning events?",
+        answer: [
+          `When the code needs to run because something was displayed to the user`,
+        ],
+      },
+      {
+        id: 912913,
+        question:
+          "When does react say a useEffect should NOT be used concerning events?",
+        answer: [
+          `When the code needs to run because of an event triggered by the user`,
+        ],
+      },
+      {
+        id: 333913,
+        question:
+          "Example of logic that only shoul be ran ONCE upon initialization, not on every mount",
+        answer: [
+          `let didInit = false;
+
+function App() {
+  useEffect(() => {
+    if (!didInit) {
+      didInit = true;
+      // ✅ Only runs once per app load
+      loadDataFromLocalStorage();
+      checkAuthToken();
+    }
+  }, []);
+  // ...
+}`,
+        ],
+      },
+      {
+        id: 916643,
+        question:
+          "About using code at the top level (outside and above App component)",
+        answer: [
+          `Code at the top level runs once when your component is imported—even if it doesn’t end up being rendered. To avoid slowdown or surprising behavior when importing arbitrary components, don’t overuse this pattern. Keep app-wide initialization logic to root component modules like App.js or in your application’s entry point.`,
+        ],
+      },
+      {
+        id: 777564,
+        question: "Passing data to the parent",
+        answer: [
+          `Avoid passing data upstream to the parent from data that is fetched by the child via useEffect. It is much more practical to fetch data from parent and pass to child as props.`,
+        ],
+      },
+      {
+        id: 777564,
+        question: "useSyncExternalStore",
+        answer: [
+          `Sometimes, your components may need to subscribe to some data outside of the React state. This data could be from a third-party library or a built-in browser API. Since this data can change without React’s knowledge, you need to manually subscribe your components to it. `,
+        ],
+      },
+      {
+        id: 117764,
+        question: "data Fetching: Race Condition",
+        answer: [
+          `Two different requests "raced" against each other and came in a different order than you expected. An example is searching "hello" and "hell" arrived after "hello", thus messing up the search. `,
+        ],
+      },
+      {
+        id: 7297564,
+        question: "Fixing race condition issues",
+        answer: [
+          `Add a cleanup function to ignore stale responses. This ensures that all responses except the last requested one will be ignored.`,
+        ],
+      },
     ],
   },
   {

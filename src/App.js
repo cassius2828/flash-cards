@@ -21,8 +21,8 @@ function App() {
     setAccordian(sectionIndex);
     if (sectionIndex === accordian) setAccordian(null);
   };
-
-const sortedData = data.sort((a,b) => {
+// sorts topics in alphabetical order
+data.sort((a,b) => {
   const A_topic = a.topic.toLocaleUpperCase();
   const B_topic = b.topic.toLocaleUpperCase();
 
@@ -30,7 +30,6 @@ const sortedData = data.sort((a,b) => {
   if (A_topic > B_topic) return 1;
   return 0
 })
-console.log(sortedData);
   return (
     <div className="App">
       <div id="nav">
